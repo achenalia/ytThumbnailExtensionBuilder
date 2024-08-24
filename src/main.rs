@@ -69,6 +69,8 @@ fn main() {
     if let Err(e) = main_builder() {
         eprintln!("Failed to build main.js: {}", e);
     }
+    eprintln!("Your extension has been built! Press enter to exit this builder.");
+    std::io::stdin().read_line(&mut String::new()).unwrap();
 }
 
 
