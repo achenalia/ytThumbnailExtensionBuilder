@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "extensionName",
+    "version": "1.0.0",
+    "description": "extensionDescription",
+    "host_permissions": [ "https://www.youtube.com/*"],
+    "content_scripts":
+    [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["main.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources":
+    [
+      {
+        "resources":
+        [
+          "assets/images/*.png"
+        ],
+        "matches": ["*://*/*"]
+      }]
+}
