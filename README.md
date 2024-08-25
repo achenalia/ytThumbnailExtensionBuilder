@@ -1,4 +1,3 @@
----
 
 # ytThumbnailExtensionBuilder
 
@@ -7,6 +6,8 @@
 `ytThumbnailExtensionBuilder` is a Rust-based CLI tool designed to create browser extensions that inject a random image from a predefined set into each thumbnail on a webpage. This tool allows you to customize the appearance of thumbnails with unique images, inspired by the Mr. Beastify browser extension.
 
 For reference, check out the Mr. Beastify extension here: [Mr. Beastify Extension](https://chromewebstore.google.com/detail/youtube-mrbeastify/dbmaeobgdodeimjdjnkipbfhgeldnmeb).
+
+NOTE: Extensions are for Firefox only at the moment. Chrome support coming soon.
 
 ## Prerequisites
 
