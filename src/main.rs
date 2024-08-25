@@ -4,10 +4,10 @@ use std::io::Write;
 // welcome the user and explain the program:
 fn welcome() {
     println!("
-    Welcome to the Youtube Thumbnail Extension Builder! \n
-    The purpose of this program is to help you build your own extension which injects a a random image out of the given images into each video's thumbnail. \n
-    The images are recommended to be 664px x 365px and have a transparent background, but you can choose whichever size you want (though it may resize unexpectedly). \n
-    To proceed, let's get some information about your extension: \n
+Welcome to the Youtube Thumbnail Extension Builder! \n
+The purpose of this program is to help you build your own extension which injects a a random image out of the given images into each video's thumbnail. \n
+The images are recommended to be 664px x 365px and have a transparent background, but you can choose whichever size you want (though it may resize unexpectedly). \n
+To proceed, let's get some information about your extension: \n
     ");
 }
 
