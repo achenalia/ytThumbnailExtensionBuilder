@@ -21,6 +21,11 @@ fn get_input(prompt: &str) -> String {
     input.trim().to_string()  // Trimming the input
 }
 
+// build the extension directory:
+fn dir_builder() -> Result<(), std::io::Error> {
+    std::fs::create_dir_all("../../extension/assets/images")?;
+    Ok(())
+}
 
 // build the manifest for the extension:
 fn manifest_builder() -> Result<(), std::io::Error> {
@@ -63,6 +68,9 @@ fn main_builder() -> Result<(), std::io::Error> {
 
 fn main() {
     welcome();
+    if let Err(e) = dir_builder() {
+        eprintln!("Failed to build directory: {}", e);
+    }
     if let Err(e) = manifest_builder() {
         eprintln!("Failed to build manifest: {}", e);
     }
