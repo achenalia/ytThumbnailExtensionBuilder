@@ -28,7 +28,7 @@ fn manifest_builder() -> Result<(), std::io::Error> {
     let description = get_input("Enter a description of your extension: ");
     let version = get_input("Enter the version of your extension: ");
 
-    let mut f = File::open("./templates/manifestTemplate.json")?;
+    let mut f = File::open("../../templates/manifestTemplate.json")?;
     let mut contents = String::new();
     std::io::Read::read_to_string(&mut f, &mut contents)?;
     
@@ -39,7 +39,7 @@ fn manifest_builder() -> Result<(), std::io::Error> {
         .replace("extensionDescription", &description)
         .replace("1.0.0", &version);
 
-    let mut f = File::create("./extension/manifest.json")?;
+    let mut f = File::create("../../extension/manifest.json")?;
     f.write_all(new_contents.as_bytes())?;
 
     Ok(())
@@ -50,12 +50,12 @@ fn main_builder() -> Result<(), std::io::Error> {
     let num_images = get_input("Enter the number of images you want to use: ");
     println!("You entered: {} \n Please make sure to place these images in the /extension/assets/images directory before using your extension.", num_images);
 
-    let mut f = File::open("./templates/mainTemplate.js")?;
+    let mut f = File::open("../../templates/mainTemplate.js")?;
     let mut contents = String::new();
     std::io::Read::read_to_string(&mut f, &mut contents)?;
     
     let new_contents = contents.replace("const numImages = 0;", &format!("const numImages = {};", num_images));
-    let mut f = File::create("./extension/main.js")?;
+    let mut f = File::create("../../extension/main.js")?;
     f.write_all(new_contents.as_bytes())?;
 
     Ok(())
