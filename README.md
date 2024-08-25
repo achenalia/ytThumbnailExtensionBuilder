@@ -1,20 +1,18 @@
 ---
 
+# ytThumbnailExtensionBuilder
+
 ## Overview
 
-This project is a Rust-based CLI tool designed for creating browser extensions that dynamically inject a random image from a predefined set into each thumbnail on a webpage. 
+`ytThumbnailExtensionBuilder` is a Rust-based CLI tool designed to create browser extensions that inject a random image from a predefined set into each thumbnail on a webpage. This tool allows you to customize the appearance of thumbnails with unique images, inspired by the Mr. Beastify browser extension.
 
-Inspired by the Mr. Beastify browser extension, this tool provides a straightforward method for customizing the appearance of thumbnails with unique images. For reference, you can explore the original Mr. Beastify extension here: [Mr. Beastify Extension](https://chromewebstore.google.com/detail/youtube-mrbeastify/dbmaeobgdodeimjdjnkipbfhgeldnmeb).
+For reference, check out the Mr. Beastify extension here: [Mr. Beastify Extension](https://chromewebstore.google.com/detail/youtube-mrbeastify/dbmaeobgdodeimjdjnkipbfhgeldnmeb).
 
----
+## Prerequisites
 
-## How to Use
+- Ensure you have Rust and Cargo installed on your system. You can install Rust from [the official Rust website](https://www.rust-lang.org/tools/install).
 
-### Prerequisites
-
-- Ensure that you have Rust and Cargo installed on your system. You can install Rust from [the official Rust website](https://www.rust-lang.org/tools/install).
-
-### Building the CLI Tool
+## Building the CLI Tool
 
 To build the CLI tool, use the following command:
 
@@ -24,9 +22,9 @@ cargo build --release
 
 This will generate an executable named `ytThumbnailExtensionBuilder` in the `target/release` directory.
 
-### Using the CLI Tool
+## Using the CLI Tool
 
-#### Windows
+### Windows
 
 1. Open Command Prompt or PowerShell.
 2. Navigate to the directory where `ytThumbnailExtensionBuilder.exe` is located:
@@ -41,7 +39,7 @@ This will generate an executable named `ytThumbnailExtensionBuilder` in the `tar
    ytThumbnailExtensionBuilder.exe
    ```
 
-#### macOS
+### macOS
 
 1. Open Terminal.
 2. Navigate to the directory where `ytThumbnailExtensionBuilder` is located:
@@ -62,7 +60,7 @@ This will generate an executable named `ytThumbnailExtensionBuilder` in the `tar
    ./ytThumbnailExtensionBuilder
    ```
 
-#### Linux
+### Linux
 
 1. Open Terminal.
 2. Navigate to the directory where `ytThumbnailExtensionBuilder` is located:
@@ -83,10 +81,14 @@ This will generate an executable named `ytThumbnailExtensionBuilder` in the `tar
    ./ytThumbnailExtensionBuilder
    ```
 
-### Notes
+## Notes
 
-- The tool will start and allow you to input your desired parameters upon running. Ensure that the necessary configuration or setup is done before running the tool.
+- The tool will allow you to input your desired parameters for the extension upon running. Ensure that any necessary configurations or setups are complete before executing the tool.
 
----
+## Contributing
 
-Feel free to modify the paths as needed based on your directory structure.
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
