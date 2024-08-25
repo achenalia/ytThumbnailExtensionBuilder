@@ -53,7 +53,7 @@ fn manifest_builder() -> Result<(), std::io::Error> {
 // build the main.js file:
 fn main_builder() -> Result<(), std::io::Error> {
     let num_images = get_input("Enter the number of images you want to use: ");
-    println!("You entered: {} \n Please make sure to place these images in the /extension/assets/images directory before using your extension.", num_images);
+    println!("Please make sure to place these images in the /extension/assets/images directory before using your extension.");
 
     let mut f = File::open("../../templates/mainTemplate.js")?;
     let mut contents = String::new();
