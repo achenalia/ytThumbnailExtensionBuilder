@@ -1,4 +1,3 @@
----
 
 # ytThumbnailExtensionBuilder
 
@@ -8,13 +7,15 @@
 
 For reference, check out the Mr. Beastify extension here: [Mr. Beastify Extension](https://chromewebstore.google.com/detail/youtube-mrbeastify/dbmaeobgdodeimjdjnkipbfhgeldnmeb).
 
+NOTE: Extensions are for Firefox only at the moment. Chrome support coming soon.
+
 ## Prerequisites
 
 - Ensure you have Rust and Cargo installed on your system. You can install Rust from [the official Rust website](https://www.rust-lang.org/tools/install).
 
-## Building the CLI Tool
+## How to Setup
 
-To build the CLI tool, use the following command:
+To build the tool, use the following command:
 
 ```bash
 cargo build --release
@@ -22,7 +23,7 @@ cargo build --release
 
 This will generate an executable named `ytThumbnailExtensionBuilder` in the `target/release` directory.
 
-## Using the CLI Tool
+## How to Use
 
 ### Windows
 
