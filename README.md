@@ -85,6 +85,7 @@ This will generate an executable named `ytThumbnailExtensionBuilder` in the `tar
 ## Notes
 
 - The tool will allow you to input your desired parameters for the extension upon running. Ensure that any necessary configurations or setups are complete before executing the tool.
+- The extension directory will be created per your input and will have a ready-to-use extension within it.
 
 ## Contributing
 
