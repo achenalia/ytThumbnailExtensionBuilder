@@ -7,7 +7,7 @@
 
 For reference, check out the Mr. Beastify extension here: [Mr. Beastify Extension](https://chromewebstore.google.com/detail/youtube-mrbeastify/dbmaeobgdodeimjdjnkipbfhgeldnmeb).
 
-NOTE: Extensions are for Firefox only at the moment. Chrome support coming soon.
+NOTE: Extensions are for Firefox and Chrome only at the moment.
 
 ## Prerequisites
 
