@@ -86,6 +86,7 @@ This will generate an executable named `ytThumbnailExtensionBuilder` in the `tar
 
 - The tool will allow you to input your desired parameters for the extension upon running. Ensure that any necessary configurations or setups are complete before executing the tool.
 - The extension directory will be created per your input and will have a ready-to-use extension within it, but don't forget to add the photos into the extension/assets/images/ directory.
+- *TO SUBMIT YOUR EXTENSION TO YOUR BROWSER'S EXTENSION STORE:* make sure to create a zip file containing the new extension with all the files included in the extension directory, then follow the procedure for your given browser.
 
 ## Contributing
 
