@@ -7,7 +7,7 @@ fn welcome() {
     println!(
         "{}",
         "Welcome to the YouTube Thumbnail Extension Builder!"
-            .bold().red()
+            .bold().underline().red()
     );
 
     println!(
@@ -25,14 +25,14 @@ fn welcome() {
     println!(
         "{}",
         "To proceed, let's get some information about your extension:"
-            .bold().green()
+            .bold().white()
     );
 }
 
 // Accept user input or return an error
 fn get_input(prompt: &str) -> String {
     let mut input = String::new();
-    println!("{}", prompt.bold().white());
+    println!("{}", prompt.italic().white());
     std::io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
@@ -122,6 +122,6 @@ fn main() {
     if let Err(e) = main_builder() {
         eprintln!("{}", format!("Failed to build main.js: {}", e).bold().red());
     }
-    println!("{}", "Your extension has been built! Press enter to exit this builder.".bold().green());
+    println!("{}", "Your extension has been built! Press enter to exit this builder.".bold().white());
     std::io::stdin().read_line(&mut String::new()).unwrap();
 }
