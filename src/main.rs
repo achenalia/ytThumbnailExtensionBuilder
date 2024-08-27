@@ -1,29 +1,42 @@
 use std::fs::File;
 use std::io::{Write, Read};
+use colored::*;  // Add this line to import the colored crate
 
 // Welcome the user and explain the program
 fn welcome() {
     println!(
-        "
-Welcome to the YouTube Thumbnail Extension Builder!
+        "{}",
+        "Welcome to the YouTube Thumbnail Extension Builder!"
+            .bold().red()
+    );
 
-The purpose of this program is to help you build your own extension which injects a random image out of the given images into each video's thumbnail.
+    println!(
+        "{}",
+        "The purpose of this program is to help you build your own extension which injects a random image out of the given images into each video's thumbnail."
+            .italic().white()
+    );
 
-The images are recommended to be 664px x 365px and have a transparent background, but you can choose whichever size you want (though it may resize unexpectedly).
+    println!(
+        "{}",
+        "The images are recommended to be 664px x 365px and have a transparent background, but you can choose whichever size you want (though it may resize unexpectedly)."
+            .italic().white()
+    );
 
-To proceed, let's get some information about your extension:
-        "
+    println!(
+        "{}",
+        "To proceed, let's get some information about your extension:"
+            .bold().green()
     );
 }
 
 // Accept user input or return an error
 fn get_input(prompt: &str) -> String {
     let mut input = String::new();
-    println!("{}", prompt);
+    println!("{}", prompt.bold().white());
     std::io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-    input.trim().to_string() // Trimming the input
+    input.trim().to_string()
 }
 
 // Build the extension directory
@@ -84,10 +97,10 @@ fn chrome_builder(num_images: &str) -> Result<(), std::io::Error> {
 fn main_builder() -> Result<(), std::io::Error> {
     let browser_type = get_input("Enter the browser type you want to use (firefox, chrome): ");
     let num_images = get_input("Enter the number of images you want to use: ");
-    println!("Please make sure to place these images in the /extension/assets/images directory before using your extension.");
+    println!("{}", "Please make sure to place these images in the /extension/assets/images directory before using your extension.".italic().red());
 
     if browser_type != "firefox" && browser_type != "chrome" {
-        println!("Invalid browser type. Please enter 'firefox' or 'chrome'.");
+        println!("{}", "Invalid browser type. Please enter 'firefox' or 'chrome'.".bold().red());
         std::process::exit(1);
     } else if browser_type == "firefox" {
         ff_builder(&num_images)?;
@@ -101,14 +114,14 @@ fn main_builder() -> Result<(), std::io::Error> {
 fn main() {
     welcome();
     if let Err(e) = dir_builder() {
-        eprintln!("Failed to build directory: {}", e);
+        eprintln!("{}", format!("Failed to build directory: {}", e).bold().red());
     }
     if let Err(e) = manifest_builder() {
-        eprintln!("Failed to build manifest: {}", e);
+        eprintln!("{}", format!("Failed to build manifest: {}", e).bold().red());
     }
     if let Err(e) = main_builder() {
-        eprintln!("Failed to build main.js: {}", e);
+        eprintln!("{}", format!("Failed to build main.js: {}", e).bold().red());
     }
-    println!("Your extension has been built! Press enter to exit this builder.");
+    println!("{}", "Your extension has been built! Press enter to exit this builder.".bold().green());
     std::io::stdin().read_line(&mut String::new()).unwrap();
 }
