@@ -97,7 +97,7 @@ fn chrome_builder(num_images: &str) -> Result<(), std::io::Error> {
 fn main_builder() -> Result<(), std::io::Error> {
     let browser_type = get_input("Enter the browser type you want to use (firefox, chrome): ");
     let num_images = get_input("Enter the number of images you want to use: ");
-    println!("{}", "Please make sure to place these images in the /extension/assets/images directory before using your extension.".italic().red());
+    println!("{}", "Please make sure to place these images in the /extension/assets/images directory before using your extension.".italic().white());
 
     if browser_type != "firefox" && browser_type != "chrome" {
         println!("{}", "Invalid browser type. Please enter 'firefox' or 'chrome'.".bold().red());
